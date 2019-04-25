@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MVCDemo.Models.Department>
+@using MVCDemo.Models;
+
+@{
+    ViewBag.Title = "Department List";
+}
+
+<h2>Department List</h2>
+
+@foreach (Department department in @Model)
+{
+    @Html.Action(department.DeptName, "GetAllEmployee", "Employee")
+}
+

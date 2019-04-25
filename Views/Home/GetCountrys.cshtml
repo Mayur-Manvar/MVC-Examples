@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Listed Countrys";
+}
+
+<h2>Countrys List</h2>
+
+<ul>
+    @foreach (string country in ViewBag.Countrys)
+    {
+        <li>@country</li>
+    }
+
+</ul>
+
+<h2>State List</h2>
+<ul>
+    @foreach (string country in ((List<string>)ViewData["States"]))
+    {
+        <li>@country</li>
+    }
+
+</ul>
